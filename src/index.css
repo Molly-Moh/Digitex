@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee-left {
+    display: flex;
+    width: max-content;
+    animation: marquee-left 56s linear infinite;
+  }
+
+  .animate-marquee-left:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes pop-fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.035);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-pop-image {
+    animation: pop-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Prevent unwanted scrolling on desktop one-page layout */
+@media (min-height: 600px) and (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+}

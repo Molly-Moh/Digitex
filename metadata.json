@@ -1,0 +1,6 @@
+{
+  "name": "Digitex Enterprise",
+  "description": "Marketing consultancy for startups featuring workshops, strategy planning, and performance analysis rate cards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
